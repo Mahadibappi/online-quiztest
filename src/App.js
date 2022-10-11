@@ -4,12 +4,14 @@ import About from "./Components/About/About";
 import Blog from "./Components/Blog/Blog";
 import Home from "./Components/Home/Home";
 import Statistics from "./Components/Statistics/Statistics";
+import Error from "./Components/Topics/Error/Error";
 import Topics from "./Components/Topics/Topics";
 import Main from "./Layout/Main";
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      errorElement: <Error />,
       element: <Main />,
       children: [
         { path: "/", element: <Home /> },
