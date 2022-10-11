@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./Components/About/About";
 import Blog from "./Components/Blog/Blog";
 import Home from "./Components/Home/Home";
+import Quiz from "./Components/Quiz/Quiz";
 import Statistics from "./Components/Statistics/Statistics";
 import Error from "./Components/Topics/Error/Error";
 import Topics from "./Components/Topics/Topics";
@@ -30,6 +31,7 @@ function App() {
         { path: "/statistics", element: <Statistics /> },
         { path: "/blog", element: <Blog /> },
         { path: "/about", element: <About /> },
+        { path: "/quiz", element: <Quiz /> },
       ],
     },
   ]);

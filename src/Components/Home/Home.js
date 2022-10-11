@@ -6,7 +6,8 @@ import Card from "../HomeCard/Card";
 const Home = () => {
   const loadData = useLoaderData();
   const data = loadData.data;
-  console.log(data);
+  console.log(loadData);
+
   return (
     <div>
       <Header />
