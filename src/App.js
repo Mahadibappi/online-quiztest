@@ -13,8 +13,18 @@ function App() {
       element: <Main />,
       children: [
         { path: "/", element: <Home /> },
-        { path: "/home", element: <Home /> },
-        { path: "/topics", element: <Topics /> },
+        {
+          path: "/home",
+          loader: async () =>
+            fetch("https://openapi.programming-hero.com/api/quiz"),
+          element: <Home />,
+        },
+        {
+          path: "/topics",
+          loader: async () =>
+            fetch("https://openapi.programming-hero.com/api/quiz"),
+          element: <Topics />,
+        },
         { path: "/statistics", element: <Statistics /> },
         { path: "/blog", element: <Blog /> },
         { path: "/about", element: <About /> },
