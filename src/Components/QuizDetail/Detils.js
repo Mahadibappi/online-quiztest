@@ -5,8 +5,27 @@ import { toast } from "react-toastify";
 const Details = ({ ques }) => {
   const [ans, setAns] = useState([]);
   const { options, question, correctAnswer, id } = ques;
-  const notify = () => toast("Wow so easy!");
   let answer = correctAnswer;
+  const [tost, setTost] = useState([]);
+  // toast
+  const correct = () =>
+    toast.success("Correct Congratulations!", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  const wrong = () =>
+    toast.error("Ops wrong try again!", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+
+  const handleAnswer = (e) => {
+    const value = e.target.value;
+    if (value === answer) {
+      setTost(correct);
+    } else {
+      setTost(wrong);
+    }
+  };
+
   const handleView = () => {
     setAns(answer);
   };
@@ -28,23 +47,24 @@ const Details = ({ ques }) => {
         <div className="flex ">
           <p className="mx-3 px-5">Q. {question}</p>
         </div>
-        <div className="flex">
+        <div className="">
           <ul>
-            <li className="flex border rounded p-5 text-1xl m-3 ">
-              <input type="checkbox" name="checkbox" />{" "}
-              <p className="mx-3">{options[0]}</p>
-            </li>
-            <li className="flex border rounded p-5 text-1xl m-3">
-              <input type="checkbox" name="checkbox" />{" "}
-              <p className="mx-3">{options[1]}</p>
-            </li>
-            <li className="flex border rounded p-5 text-1xl m-3">
-              <input type="checkbox" name="checkbox" />
-              <p className="mx-3">{options[2]}</p>
-            </li>
-            <li className="flex border rounded p-5 text-1xl m-3">
-              <input type="checkbox" name="checkbox" />{" "}
-              <p className="mx-3">{options[3]}</p>
+            <li className=" grid grid-flow-row  border rounded p-10 text-1xl m-5 gap-4">
+              {options.map((option) => (
+                <div>
+                  <button>
+                    <input
+                      className="mr-2"
+                      onClick={handleAnswer}
+                      type="radio"
+                      name="radio"
+                      key={id}
+                      value={option}
+                    />
+                    {option}
+                  </button>
+                </div>
+              ))}
             </li>
           </ul>
         </div>
