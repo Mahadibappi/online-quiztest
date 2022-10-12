@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./Components/About/About";
 import Blog from "./Components/Blog/Blog";
 import Home from "./Components/Home/Home";
+import Card from "./Components/HomeCard/Card";
 import Quiz from "./Components/Quiz/Quiz";
 import Statistics from "./Components/Statistics/Statistics";
 import Error from "./Components/Topics/Error/Error";
@@ -31,7 +32,15 @@ function App() {
         { path: "/statistics", element: <Statistics /> },
         { path: "/blog", element: <Blog /> },
         { path: "/about", element: <About /> },
-        { path: "/quiz", element: <Quiz /> },
+        {
+          path: "/quiz/:id",
+          loader: async ({ params }) => {
+            return fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.id}`
+            );
+          },
+          element: <Quiz />,
+        },
       ],
     },
   ]);

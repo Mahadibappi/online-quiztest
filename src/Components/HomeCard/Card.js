@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({ data }) => {
-  const { name, logo, total } = data;
+  const { id, name, logo, total } = data;
 
   return (
     <div>
@@ -25,7 +25,7 @@ const Card = ({ data }) => {
               <p className="text-1xl my-3 leading-5">Questions:{total} </p>
             </a>
           </div>
-          <Link to={"/quiz"}>
+          <Link to={`/quiz/${id}`}>
             <button
               type="submit"
               className="d-flex items-center justify-center h-12 ms-6 px-6 font-medium tracking-wide text-green-500 transition duration-200 rounded bg-purple-700 focus:shadow-outline focus:outline-none"
