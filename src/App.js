@@ -29,7 +29,11 @@ function App() {
             fetch("https://openapi.programming-hero.com/api/quiz"),
           element: <Topics />,
         },
-        { path: "/statistics", element: <Statistics /> },
+        {
+          path: "/statistics",
+
+          element: <Statistics />,
+        },
         { path: "/blog", element: <Blog /> },
         { path: "/about", element: <About /> },
         {
