@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Programming Hero](https://github.com/programming-hero-web-course2/b6-quiz-crackerz-Mahadibappi).
 
-## Available Quiz is
+## Available Quiz is about: JavaScript, Css, React, And Git
 
 In the project directory, you can learn much more about ccs, js, and react:
 
@@ -14,7 +14,7 @@ Open [http://localhost:3000](https://github.com/programming-hero-web-course2/b6-
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### This project helped me learn about react router dom much more efficiently.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
