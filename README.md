@@ -4,6 +4,14 @@ This project was bootstrapped with [Programming Hero](https://github.com/program
 
 ## Available Quiz is about: JavaScript, Css, React, And Git
 
+## I learned from this project much more things
+
+## How to react router dom
+
+## Hot to dynamic the components
+
+## How to solve different problems
+
 In the project directory, you can learn much more about ccs, js, and react:
 
 ## Live Site Link is:
