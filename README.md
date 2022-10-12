@@ -14,7 +14,7 @@ This project was bootstrapped with [Programming Hero](https://github.com/program
 
 In the project directory, you can learn much more about ccs, js, and react:
 
-## Live Site Link is:
+## Live Site Link is: https://verdant-platypus-562e9c.netlify.app/
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](https://github.com/programming-hero-web-course2/b6-quiz-crackerz-Mahadibappi) to view it in your browser.
