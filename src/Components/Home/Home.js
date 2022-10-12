@@ -5,7 +5,6 @@ import Card from "../HomeCard/Card";
 
 const Home = () => {
   const loadData = useLoaderData();
-
   const data = loadData.data;
 
   return (
