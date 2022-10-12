@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { EyeIcon } from "@heroicons/react/24/solid";
+import { toast } from "react-toastify";
 
-const Detils = ({ ques }) => {
+const Details = ({ ques }) => {
+  const [ans, setAns] = useState([]);
   const { options, question, correctAnswer, id } = ques;
-  console.log(question);
+  const notify = () => toast("Wow so easy!");
+  let answer = correctAnswer;
+  const handleView = () => {
+    setAns(answer);
+  };
+
   return (
     <div>
       <div className="max-w-xl mb-5 md:mx-auto sm:text-center lg:max-w-2xl">
         <div className="mb-4 flex align-middle justify-between relative">
           <div>
-            <EyeIcon className=" flex justify-end h-6 w-6 text-blue-500 absolute right-0" />
+            <EyeIcon
+              onClick={handleView}
+              className=" flex justify-end h-6 w-6 text-blue-500 absolute right-0"
+            />
+            <h2 className="text-green-400 text-2xl ">{ans}</h2>
           </div>
         </div>
       </div>
@@ -42,4 +53,4 @@ const Detils = ({ ques }) => {
   );
 };
 
-export default Detils;
+export default Details;

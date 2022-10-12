@@ -3,12 +3,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./Components/About/About";
 import Blog from "./Components/Blog/Blog";
 import Home from "./Components/Home/Home";
-import Card from "./Components/HomeCard/Card";
 import Quiz from "./Components/Quiz/Quiz";
 import Statistics from "./Components/Statistics/Statistics";
 import Error from "./Components/Topics/Error/Error";
 import Topics from "./Components/Topics/Topics";
 import Main from "./Layout/Main";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const router = createBrowserRouter([
     {
@@ -48,9 +49,11 @@ function App() {
       ],
     },
   ]);
+
   return (
     <div className="App">
       <RouterProvider router={router} />
+      <ToastContainer />
     </div>
   );
 }
